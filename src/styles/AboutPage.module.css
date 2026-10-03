@@ -1,0 +1,203 @@
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(var(--accent-color-rgb), 0.15);
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  object-fit: cover;
+}
+
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.headerName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.headerRole {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.headerLocation {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.sectionNumber {
+  color: var(--accent-color);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.sectionBody {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.75;
+  line-height: 1.8;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.experienceCard {
+  background-color: rgba(var(--accent-color-rgb), 0.04);
+  border: 1px solid rgba(var(--accent-color-rgb), 0.1);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.experienceCard:hover {
+  border-color: rgba(var(--accent-color-rgb), 0.3);
+  transform: translateY(-2px);
+}
+
+.experienceTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 0.25rem;
+}
+
+.experienceCompany {
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.experienceDuration {
+  font-size: 0.75rem;
+  color: var(--text-color);
+  opacity: 0.45;
+  margin-top: 0.25rem;
+}
+
+.experienceDescription {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.65;
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.skillCategory {
+  margin-bottom: 0.25rem;
+}
+
+.skillCategoryTitle {
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skillTag {
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0.25rem 0.6rem;
+  background-color: rgba(var(--accent-color-rgb), 0.08);
+  border: 1px solid rgba(var(--accent-color-rgb), 0.12);
+  border-radius: 4px;
+  color: var(--text-color);
+  opacity: 0.8;
+  transition: background-color 0.2s, border-color 0.2s, opacity 0.2s;
+  cursor: default;
+}
+
+.skillTag:hover {
+  background-color: rgba(var(--accent-color-rgb), 0.18);
+  border-color: rgba(var(--accent-color-rgb), 0.3);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 1.5rem 0;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .headerLocation {
+    justify-content: center;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .experienceCard {
+    padding: 1rem;
+  }
+}

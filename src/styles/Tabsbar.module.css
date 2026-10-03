@@ -1,0 +1,17 @@
+.tabsbar {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--tabs-bg);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabsbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .tabsbar {
+    font-size: 0.75rem;
+  }
+}

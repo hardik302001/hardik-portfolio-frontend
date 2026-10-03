@@ -1,0 +1,135 @@
+.terminal {
+  height: 25vh;
+  min-height: 150px;
+  background-color: var(--terminal-bg);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 32px;
+  min-height: 32px;
+  background-color: var(--terminal-header-bg);
+  border-bottom: 1px solid var(--terminal-border);
+  border-top: 1px solid var(--terminal-border);
+  padding: 0 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-color);
+  user-select: none;
+}
+
+.headerTabs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+.headerTab {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.headerTab:hover {
+  opacity: 1;
+}
+
+.headerTabActive {
+  opacity: 1;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.6;
+}
+
+.body {
+  flex: 1;
+  overflow: auto;
+  padding: 0.75rem 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg);
+}
+
+.body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.body::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-bg);
+}
+
+.body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 3px;
+}
+
+.line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.prompt {
+  color: var(--accent-color);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: inherit;
+  flex: 1;
+  caret-color: var(--accent-color);
+}
+
+.output {
+  opacity: 0.8;
+}
+
+.error {
+  color: #f85149;
+}
+
+.success {
+  color: #50fa7b;
+}
+
+@media (max-width: 900px) {
+  .terminal {
+    height: 20vh;
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .terminal {
+    height: 18vh;
+    min-height: 100px;
+  }
+
+  .body {
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
+}

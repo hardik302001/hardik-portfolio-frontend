@@ -1,0 +1,60 @@
+.tab {
+  padding: 0.5rem 1.25rem;
+  background-color: var(--tab-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-right: 1px solid var(--tab-border);
+  border-bottom: 1px solid var(--tab-border);
+  border-top: 1px solid transparent;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-color);
+  opacity: 0.6;
+  white-space: nowrap;
+  transition: opacity 0.2s, background-color 0.2s;
+  user-select: none;
+}
+
+.tab:hover {
+  opacity: 0.85;
+}
+
+.active {
+  border-top: 1px solid var(--accent-color);
+  background-color: var(--tab-active-bg);
+  border-bottom: 1px solid transparent;
+  opacity: 1;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.closeIcon {
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.tab:hover .closeIcon {
+  opacity: 0.6;
+}
+
+.closeIcon:hover {
+  opacity: 1 !important;
+}
+
+@media (max-width: 600px) {
+  .tab {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}

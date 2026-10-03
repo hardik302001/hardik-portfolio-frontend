@@ -1,0 +1,86 @@
+.explorer {
+  width: 18vw;
+  min-width: 160px;
+  max-width: 280px;
+  background-color: var(--explorer-bg);
+  border-right: 1px solid var(--explorer-border);
+  overflow-y: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-color);
+  user-select: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg);
+}
+
+.explorer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.explorer::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-bg);
+}
+
+.explorer::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 3px;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 0.7rem;
+  padding: 0.75rem 1rem;
+  opacity: 0.8;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.7rem;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.chevron {
+  font-size: 0.6rem;
+  transition: transform 0.2s;
+}
+
+.file {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem 0.25rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file:hover {
+  background-color: var(--explorer-hover-bg);
+}
+
+.fileIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.fileName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+  .explorer {
+    display: none;
+  }
+}
